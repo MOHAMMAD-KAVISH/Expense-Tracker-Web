@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker - Mohammad Kavish</title>
+  <link rel="stylesheet" href="pep1.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="image-container">
+      <img src="logo.png" alt="expense tracker" width="300" height="300">
+    </div>
+
+    <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    <form id="expense-form">
+      <input type="text" id="description" placeholder="Description" required>
+      <input type="number" id="amount" placeholder="Amount" required>
+      <input type="text" id="category" placeholder="Category" required>
+      <input type="date" id="date" required>
+      <button type="submit">Add Expense</button>
+    </form>
+    <div class="expense-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Category</th>
+            <th>Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="expense-list"></tbody>
+      </table>
+      <div class="total-amount">
+        <strong>Total:</strong>
+        ₹<span id="total-amount">0</span>
+      </div>
+    </div>
+    <div class="filter-controls">
+      <button id="sort-by-amount">Sort by Amount</button>
+      <button id="sort-by-date">Sort by Date</button>
+      <input type="text" id="search-input" placeholder="Search by description">
+      <select id="category-filter">
+        <option value="">All Categories</option>
+      </select>
+      <input type="date" id="start-date" placeholder="Start Date">
+      <input type="date" id="end-date" placeholder="End date">
+      <button id="filter-by-date">Filter by Date</button>
+    </div>
+    <h2>Summary</h2>
+    <div id="summary"></div>
+    <h2>Expense Distribution</h2>
+    <canvas id="expense-chart" width="100" height="100"></canvas>
+  </div>
+  <footer>
+    <p>© 2024 Mohammad Kavish. All rights reserved.</p>
+  </footer>
+  <script src="pep1.js"></script>
+</body>
+</html>

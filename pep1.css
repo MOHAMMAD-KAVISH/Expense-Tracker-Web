@@ -1,0 +1,185 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background: #333;
+  color: #fff;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  overflow: hidden;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+  border: 5px solid rgb(21, 20, 19);
+}
+
+.container.dark-mode {
+  background: rgba(50, 50, 50, 0.9);
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+input, button, select {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  flex: 1;
+  margin-right: 10px;
+  border: 2px solid orange;
+}
+
+button {
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  flex: 0 0 auto;
+}
+
+button:hover {
+  background: #555;
+}
+
+.expense-table {
+  flex: 1;
+  margin-top: 20px;
+  overflow-y: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background: #333;
+  color: #fff;
+}
+
+th.dark-mode {
+  background: #444;
+}
+
+td button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+td button.edit {
+  background: #99f16a;
+}
+
+td button.delete {
+  background: #049e02;
+  color: #fff;
+}
+
+.total-amount {
+  margin-top: 20px;
+  font-size: 1.2em;
+  background: #739d49;
+  padding: 10px;
+  border: 1px solid #282727;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.total-amount.dark-mode {
+  background: #2e6830;
+  border-color: #333;
+}
+
+#summary p {
+  margin: 5px 0;
+  font-size: 1em;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background: #333;
+  color: #fff;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+}
+
+#expense-chart {
+  max-width: 300px;
+  max-height: 300px;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.filter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.filter-controls button, .filter-controls input, .filter-controls select {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  form {
+    flex-direction: column;
+  }
+
+  input, button, select {
+    flex: 1 1 100%;
+    margin-right: 0;
+  }
+
+  .filter-controls {
+    flex-direction: column;
+  }
+}
